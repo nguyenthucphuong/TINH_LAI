@@ -11,9 +11,8 @@ $(document).ready(function () {
             number = 0;
         }
         $(this).val(number.toLocaleString('en-US'));
-    });
-
-    $('#ketqua').on('click', function () {
-        $('form')[0].submit();
-    });
+    });   
+});
+$('#ketqua').on('click', function () {
+    $('form')[0].submit();
 });
