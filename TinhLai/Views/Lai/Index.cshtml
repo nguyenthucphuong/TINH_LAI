@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link rel="stylesheet" href="~/css/style.css" />
+    <script src="@Url.Content("~/js/site.js")"></script>
+}
+<h1 class="centered-heading">CÔNG CỤ TÍNH LÃI TIỀN GỬI TIẾT KIỆM</h1>
+<div class="row">
+    <div class="column side custom-label-left">
+        <form name="myform" action="/Lai/Index" method="post">
+            <label for="soTien">Số tiền gửi *</label>
+            <input type="text" id="soTien" name="soTien" value="@ViewData["sotien"]"><span>đ</span>
+            <label for="laiSuat">Lãi suất gửi *</label>
+            <input type="number" id="laiSuat" name="laiSuat" value="@ViewData["laisuat"]"><span>%/Năm</span>
+            <label for="kyHan">Kỳ hạn gửi *</label>
+            <input type="number" id="kyHan" name="kyHan" value="@ViewData["kyhan"]"><span>Tháng</span>
+        </form>
+    </div>
+    <div class="column middle">
+        <button type="submit" id="ketqua" class="button">XEM KẾT QUẢ</button>
+    </div>
+    <!-- Chưa giải quyết được vấn đề: <span><sup>đ</sup></span> có thể hiển thị sau ViewData trong content của trường input -->
+    <div class="column side custom-label-right background">
+        <label for="tienLai">Số tiền lãi nhận được</label>
+        <input type="text" class="inline-input" id="tienLai" name="tienLai" value="@ViewData["tienLai"] đ">
+        <label for="tongTien">Tổng số tiền nhận được khi đến hạn</label>
+        <input type="text" id="tongTien" name="tongTien" value="@ViewData["tongTien"] đ">
+    </div>
+</div>
+<!--
+    1. Ràng buộc: chỉ cho phép nhập kí tự số và hiển thị phân tách hàng triệu, ngàn, trăm...
+<script>
+    const inputField = document.getElementById('soTien');
+    inputField.addEventListener('input', function() {
+        if (/^0/.test(this.value) || /[^0-9]/.test(this.value)) {
+            this.value = this.value.replace(/^0/, '').replace(/[^0-9]/g, '');
+        }
+    });
+</script>
+
+     2. Khi nhấn nút submit (ngoài form) thì lấy dữ liệu form từ View gởi đến Controller
+<script>
+    document.getElementById("ketqua").addEventListener("click", function() {
+        document.forms[0].submit();
+    }); 
+</script>
+
+Sau đó, gộp cả hai lệnh Javascript chép vào site.js trong thư mục js của wwwroot
+-->
+
+
+
+
+
+
+

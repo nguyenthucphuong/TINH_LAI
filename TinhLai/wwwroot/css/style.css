@@ -1,0 +1,121 @@
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    display: inline-block;
+}
+
+    .column.side {
+        width: 40%;
+    }
+
+    .column.middle {
+        width: 20%;
+    }
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+input[type="text"], input[type="number"] {
+    width: 85%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid lightgrey;
+}
+
+#tienLai, #tongTien {
+    border-bottom: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: #483fa8;
+    margin-bottom: 40px;
+    display: inline-block;
+    width: auto;
+}
+
+.custom-label-right {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    color: #9a9a9a;
+    margin-bottom: 8px;
+}
+
+.custom-label-left {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #616161;
+    margin-bottom: 0px;
+}
+
+.button {
+    background-color: #704ddc;
+    padding: 0 5px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 40px;
+    vertical-align: middle;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 260px;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+}
+
+.centered-heading {
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: #4c469c;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.background {
+    background: #ffffff;
+    box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.25), 5px 5px 24px rgba(72, 63, 168, 0.4);
+    border-radius: 16px;
+    padding: 28px 40px;
+    margin-bottom: 150px;
+    height: 260px;
+}
